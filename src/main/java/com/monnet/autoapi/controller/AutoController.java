@@ -19,9 +19,7 @@ public class AutoController {
         this.autoService = autoService;
     }
 
-//    @GetMapping("/modo/{dia}/{camuflaje}/{armas}")
     @GetMapping("/modo/{dia}")
-
     public ResponseEntity<String> obtenerModo(@PathVariable("dia") String dia,
                 @RequestParam(value = "camuflaje", required = false) Integer camuflaje,
                 @RequestParam(value = "armas", required = false) Integer armas) {
@@ -30,6 +28,7 @@ public class AutoController {
             String resultado = auto.usar();
 
             // Si es modo Offroad, también activamos llantas y doble tracción.
+
             if (auto instanceof AutoOffRoad autoOffRoad) {
                 resultado += "\n" + autoOffRoad.activarLlantasAnchas();
                 resultado += "\n" + autoOffRoad.activarDobleTraccion();

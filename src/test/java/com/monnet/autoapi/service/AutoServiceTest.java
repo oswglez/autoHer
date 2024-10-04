@@ -1,15 +1,13 @@
 package com.monnet.autoapi.service;
 
-import com.monnet.autoapi.model.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-
-import static org.junit.jupiter.api.Assertions.*;
-
+import com.monnet.autoapi.model.Auto;
+import com.monnet.autoapi.model.AutoAgenteSecreto;
+import com.monnet.autoapi.model.AutoCarrera;
+import com.monnet.autoapi.model.AutoTrabajo;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AutoServiceTest {
 
